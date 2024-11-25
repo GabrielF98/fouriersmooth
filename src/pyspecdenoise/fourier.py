@@ -13,46 +13,9 @@ from numpy.fft import fft, ifft
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
-def load_spec(file_path):
-    """
-    Simple function to load a spectrum from a text file.
-    Can handle basic filestructures containing at least a wavelength and flux column.
-
-    :param file_path: Path to the spectrum file.
-    :type file_path: str
-    :return: Wavlength and flux of the spectrum.
-    :rtype: numpy.ndarray
-    """
-    with open(file_path) as newfile:
-        lines = newfile.readlines()
-        i = 0
-        for line in lines:
-            if line[2] != " ":
-                break
-            i += 1
-
-    wave, flux = np.loadtxt(file_path, usecols=range(2), skiprows=i, unpack=True)
-
-    return wave, flux
-
 def power_law(x, a, b):
     """Power law fit."""
     return a * (x**b)
-
-def check_for_ergs(flux):
-    """
-    To improve smoothing, we need to normalise the spectrum to the mean if it has low flux.
-
-    :param flux: Spectrum flux.
-    :type flux: numpy.ndarray
-    :return: Spectrum flux, normalised if necessary.
-    :rtype: numpy.ndarray
-    """
-    if np.mean(flux) < 1e-3:
-        return flux / np.mean(flux)
-    else:
-        return flux
-
 
 def create_stddev_arr(flux, smooth_flux, wave, width):
     """
