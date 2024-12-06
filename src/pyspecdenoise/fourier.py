@@ -1,13 +1,5 @@
 """
 A python module to perform Fourier denoising of spectra.
-If using this work, please cite Finneran et al. (2024).
-The paper is available at: https://arxiv.org/abs/2411.11503.
-
-This module is based on the algorithm presented in Liu et al. (2016),
-available at: https://ui.adsabs.harvard.edu/abs/2016ApJ...827...90L/abstract.
-An IDL version of this code was made available by the original developers at: 
-https://github.com/metal-sn/SESNspectraLib/blob/master/SNspecFFTsmooth.pro
-This is the first publicly available implementation of this algorithm written in Python.
 """
 
 import numpy as np
@@ -24,9 +16,9 @@ def power_law(x, a, b):
 
 def create_stddev_arr(flux, smooth_flux, wave, width):
     """
-    Produces the "residual" array: difference between the input spectrum and the smoothed spectrum.
-    Computes the standard deviation of the residual array within a symmetric window at each pixel.
-    Returns this standard deviation array.
+    - Produces the "residual" array: difference between the input spectrum and the smoothed spectrum.
+    - Computes the standard deviation of the residual array within a symmetric window at each pixel.
+    - Returns this standard deviation array.
 
     :param flux: Spectrum flux array.
     :type flux: numpy.ndarray
@@ -53,16 +45,12 @@ def create_stddev_arr(flux, smooth_flux, wave, width):
 def fourier_smoothing(wlen, flux, k_high: int = 300, k_low: int = 3):
     # pylint: disable=R0914
     """
-    Implements Liu et al 2016 smoothing in python. See their appendix B.
-    Available at: https://ui.adsabs.harvard.edu/abs/2016ApJ...827...90L/abstract
-    The goal is to remove the Fourier components in which the noise dominates the spectrum.
 
-    Procedure:
+    **Procedure:**\n
     - Rebin the spectrum on a log-wavelength axis.
     - Resample spectrum into equal-width bins. Uses the smallest dispersion as the bin width.
     - Take the FFT of the flux.
-    - Define the range of wavenumbers/velocities for spectral features (see note);
-      the FT indices are determined using k_low and k_high.
+    - Define the range of wavenumbers/velocities for spectral features (see note); the FT indices are determined using k_low and k_high.
     - Fit the magnitude (M) spectrum with a power law between k_low and k_high.
     - Compute MEAN(M).
     - k_noise is the point of intersection between the power law fit an MEAN(M).
@@ -71,10 +59,10 @@ def fourier_smoothing(wlen, flux, k_high: int = 300, k_low: int = 3):
     - Resample spectrum to the original linear grid.
 
 
-    Note:
-    k is related to the velocity of spectral features in the SN spectrum by k = c/v.
-    k can be chosen to exclude high and low velocity features that are likely not due to the SN.
-    The default values of k are k=300 (3000 km/s) and k=3 (100000 km/s) (Liu et al. 2016).
+    **Notes:** \n
+    - k is related to the velocity of spectral features in the SN spectrum by k = c/v.
+    - k can be chosen to exclude high and low velocity features that are likely not due to the SN.
+    - The default values of k are k=300 (3000 km/s) and k=3 (100000 km/s) (Liu et al. 2016).
 
     :param wlen: Wavelength array of the spectrum.
     :type wlen: numpy.ndarray
