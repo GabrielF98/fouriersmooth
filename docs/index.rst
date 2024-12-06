@@ -38,7 +38,7 @@ You can also contact me at `by email <mailto:gabfin15@gmail.com>`_.
 
 How to cite this code in your work
 ----------------------------------
-If you use emlineclipper in your work, please consider citing `Finneran et al. (2024) <https://arxiv.org/abs/2411.11503>`_ (see below for bibtex). I would also appreciate if you could add an acknowledgement such as:
+If you use emlineclipper in your work, please consider citing `Finneran et al. (2024) <https://arxiv.org/abs/2411.12574>`_ (see below for bibtex). I would also appreciate if you could add an acknowledgement such as:
 
 .. code-block:: latex
 
