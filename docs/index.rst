@@ -16,11 +16,16 @@ pyspecdenoise documentation
 |GitHub Release| |Publish with PyPI|
 
 
-Python library to remove noise from supernova spectra using a Fourier method. Developed by Gabriel Finneran at University College Dublin, Ireland. 
+Python library for removing noise from supernova spectra using a Fourier method. Implemented by Gabriel Finneran at University College Dublin, Ireland. 
+
+Here is an example showing the input and result for a spectrum of SN2004gq (taken from `WISeREP <https://www.wiserep.org/object/8340>`_). 
+
+.. image:: _static/FitB.png
+   :width: 600
 
 A full description of the tool is given here. Further information may be found in `Finneran et al. (2024) <https://arxiv.org/abs/2411.12574>`_ (see below for how details on how to cite this work!).
 
-This module is based on the algorithm presented in `Liu et al. (2016) <https://ui.adsabs.harvard.edu/abs/2016ApJ...827...90L/abstract>`_ (see their Appendix B). 
+This algorithm is based on the procedure presented in `Liu et al. (2016) <https://ui.adsabs.harvard.edu/abs/2016ApJ...827...90L/abstract>`_ (see their Appendix B). 
 This is the first publicly available implementation of this algorithm written in Python.
 An `IDL version of this code <https://github.com/metal-sn/SESNspectraLib/blob/master/SNspecFFTsmooth.pro>`_ is available from the original developers. 
 
@@ -35,6 +40,7 @@ The source code can be found on `GitHub <https://github.com/GabrielF98/fouriersm
 Issues can be logged `here <https://github.com/GabrielF98/fouriersmooth/issues>`_.
 
 You can also contact me at `by email <mailto:gabfin15@gmail.com>`_.
+
 
 Basic description
 -----------------
@@ -57,6 +63,11 @@ Set M = 0 for k>k_noise.
 Invert FFT. 
 
 Resample spectrum to the original linear grid. 
+
+Here is an example image showing the procedure used to determine k_noise (using the same spectrum of SN2004gq from WISeREP)
+
+.. image:: _static/FitA.png
+   :width: 600
 
 **Notes:**
 

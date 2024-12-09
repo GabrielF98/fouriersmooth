@@ -2,10 +2,7 @@
 Example
 =======
 
-You can smooth a supernova spectrum using the following code. 
-
-This example uses a spectrum of SN2004gq taken from `WISeREP <https://www.wiserep.org/object/8340>`_. 
-You can obtain the spectrum on GitHub `here <https://github.com/GabrielF98/fouriersmooth/tree/example>`_. 
+You can smooth a supernova spectrum using this example code. 
 
 .. code-block:: Python
 
@@ -41,3 +38,10 @@ You can obtain the spectrum on GitHub `here <https://github.com/GabrielF98/fouri
     plt.legend()
     plt.savefig("example.png", dpi=600, bbox_inches="tight")
 
+This code will produce the following output:
+
+.. image:: _static/example.png
+   :width: 600
+
+This example uses a spectrum of SN2004gq taken from `WISeREP <https://www.wiserep.org/object/8340>`_. 
+You can obtain the spectrum on GitHub `here <https://github.com/GabrielF98/fouriersmooth/tree/main/example>`_. 
