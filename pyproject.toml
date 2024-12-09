@@ -47,7 +47,9 @@ post_commit_hooks = []
 
 [[tool.bumpversion.files]]
 filename = "pyproject.toml"
+[[tool.bumpversion.files]]
+filename = "docs/conf.py"
 
 [project.urls]
-Homepage = "https://github.com/GabrielF98/pyspecdenoise"
-Issues = "https://github.com/GabrielF98/pyspecdenoise/issues"
+Homepage = "https://github.com/GabrielF98/fouriersmooth"
+Issues = "https://github.com/GabrielF98/fouriersmooth/issues"
