@@ -1,7 +1,7 @@
 # pyspecdenoise documentation
 
 ![GitHub Release](https://img.shields.io/github/v/release/GabrielF98/pyspecdenoise?color=teal)
-[![Publish with PyPI](https://github.com/GabrielF98/fouriersmooth/actions/workflows/python-publish.yml/badge.svg)](https://github.com/GabrielF98/fouriersmooth/actions/workflows/python-publish.yml)
+[![Publish with PyPI](https://github.com/GabrielF98/fouriersmooth/actions/workflows/python-publish.yml/badge.svg?nocache=1)](https://github.com/GabrielF98/fouriersmooth/actions/workflows/python-publish.yml)
 
 Python library for removing noise from supernova spectra using a Fourier method. Implemented by Gabriel Finneran at University College Dublin, Ireland.
 
