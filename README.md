@@ -5,14 +5,14 @@
 
 Python library for removing noise from supernova spectra using a Fourier method. Implemented by Gabriel Finneran at University College Dublin, Ireland.
 
-Here is an example showing the input and result for a spectrum of SN2004gq (taken from [WISeREP](https://www.wiserep.org/object/8340)).
+Here is an example showing the input and result for a spectrum of SN2004gq (spectrum taken from [WISeREP](https://www.wiserep.org/object/8340)).
 
-![Spectrum Example](./_static/FitB.png)
+![Spectrum Example](https://github.com/GabrielF98/fouriersmooth/blob/main/docs/_static/FitB.png)
 
 A full description of the tool is given here. Further information may be found in [Finneran et al. (2024)](https://arxiv.org/abs/2411.12574) (see below for details on how to cite this work!).
 
-This algorithm is based on the procedure presented in [Liu et al. (2016)](https://ui.adsabs.harvard.edu/abs/2016ApJ...827...90L/abstract) (see their Appendix B).  
-This is the first publicly available implementation of this algorithm written in Python.  
+This algorithm is based on the procedure presented in [Liu et al. (2016)](https://ui.adsabs.harvard.edu/abs/2016ApJ...827...90L/abstract) (see their Appendix B). This is the first publicly available implementation of this algorithm written in Python.  
+
 An [IDL version of this code](https://github.com/metal-sn/SESNspectraLib/blob/master/SNspecFFTsmooth.pro) is available from the original developers.
 
 This package can be installed from [PyPI](https://pypi.org/project/pyspecdenoise/) using pip:
@@ -40,7 +40,7 @@ You can also contact me via [email](mailto:gabfin15@gmail.com).
 
 Here is an example image showing the procedure used to determine `k_noise` (using the same spectrum of SN2004gq from WISeREP):
 
-![Procedure Example](./_static/FitA.png)
+![Spectrum Example](https://github.com/GabrielF98/fouriersmooth/blob/main/docs/_static/FitA.png)
 
 **Notes:**
 
@@ -51,13 +51,12 @@ Here is an example image showing the procedure used to determine `k_noise` (usin
 ## How to cite this code in your work
 
 If you use `pyspecdenoise` in your work, please consider citing [Finneran et al. (2024)](https://arxiv.org/abs/2411.12574) (see below for bibtex).  
+
 I would also appreciate it if you could add an acknowledgment such as:
 
 ```
-To remove noise from supernova spectra, 
-this work has made use of \texttt{pyspecdenoise}, 
-implemented by Gabriel Finneran and available at: 
-\url{https://github.com/GabrielF98/fouriersmooth}.
+To remove noise from supernova spectra, this work has made use of \texttt{pyspecdenoise},
+implemented by Gabriel Finneran and available at: \url{https://github.com/GabrielF98/fouriersmooth}.
 ```
 
 ```
