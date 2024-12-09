@@ -7,7 +7,7 @@ Python library for removing noise from supernova spectra using a Fourier method.
 
 Here is an example showing the input and result for a spectrum of SN2004gq (spectrum taken from [WISeREP](https://www.wiserep.org/object/8340)).
 
-![Spectrum Example](https://github.com/GabrielF98/fouriersmooth/blob/main/docs/_static/FitB.png)
+<img width="600" alt="Noise removal result" src="https://github.com/user-attachments/assets/322e6994-17e9-47e0-9ebe-910b3a4935d9">
 
 A full description of the tool is given here. Further information may be found in [Finneran et al. (2024)](https://arxiv.org/abs/2411.12574) (see below for details on how to cite this work!).
 
@@ -42,7 +42,7 @@ You can also contact me via [email](mailto:gabfin15@gmail.com).
 
 Here is an example image showing the procedure used to determine `k_noise` (using the same spectrum of SN2004gq from WISeREP):
 
-![Spectrum Example](https://github.com/GabrielF98/fouriersmooth/blob/main/docs/_static/FitA.png)
+<img width="600" alt="Noise removal procedure" src="https://github.com/user-attachments/assets/0cbf69fe-86be-480c-9187-0e2f1c2bbe63">
 
 **Notes:**
 
