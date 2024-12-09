@@ -20,6 +20,8 @@ This package can be installed from [PyPI](https://pypi.org/project/pyspecdenoise
 ```
 pip install pyspecdenoise
 ```
+
+Full documentation is available [here](https://pyspecdenoise.readthedocs.io/en/stable/).
  
 Issues can be logged [here](https://github.com/GabrielF98/fouriersmooth/issues).
 
