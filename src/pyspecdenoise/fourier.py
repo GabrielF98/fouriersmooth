@@ -93,7 +93,6 @@ def fourier_smoothing(wlen, flux, k_high: int = 300, k_low: int = 3):
 
     max_index = 0
     if num_samples % 2 == 0:
-        print("N is even")
         max_index = num_samples // 2
     else:
         max_index = num_samples // 2 + 1
@@ -114,9 +113,12 @@ def fourier_smoothing(wlen, flux, k_high: int = 300, k_low: int = 3):
 
     # Determine k_noise
     k_noise_idx = np.where(power_law(k[1:max_index], *popt) < mean_mag)[0][0]
-    print(mean_mag, k[k_noise_idx], power_law(k[k_noise_idx], *popt))
 
-    print(k)
+    # Print some useful info
+    print("---------------------------------------------------------")
+    print(f"The mean FFT magnitude is: {mean_mag}")
+    print(f"k_noise is: {k[k_noise_idx]}")
+    print("---------------------------------------------------------")
 
     # Set the noise FFT coefficients to 0
     flux_fft[k_noise_idx:-k_noise_idx] = 0
