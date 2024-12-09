@@ -18,7 +18,7 @@ pyspecdenoise documentation
 
 Python library for removing noise from supernova spectra using a Fourier method. Implemented by Gabriel Finneran at University College Dublin, Ireland. 
 
-Here is an example showing the input and result for a spectrum of SN2004gq (taken from `WISeREP <https://www.wiserep.org/object/8340>`_). 
+Here is an example showing the input and result for a spectrum of SN2004gq (spectrum taken from `WISeREP <https://www.wiserep.org/object/8340>`_). 
 
 .. image:: _static/FitB.png
    :width: 600
