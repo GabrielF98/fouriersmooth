@@ -5,7 +5,7 @@ Example
 You can smooth a supernova spectrum using the following code. 
 
 This example uses a spectrum of SN2004gq taken from `WISeREP <https://www.wiserep.org/object/8340>`_. 
-You can obtain the spectrum on GitHub `here <https://github.com/GabrielF98/fouriersmooth/tree/example>`_. 
+You can obtain the spectrum on GitHub `here <https://github.com/GabrielF98/fouriersmooth/tree/main/example>`_. 
 
 .. code-block:: Python
 
